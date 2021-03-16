@@ -1,12 +1,11 @@
 # SMART CHOICE
 A website that can compare the price of a product from different resources (Tiki, Lazada, Shopee...)
 
-- High Level Design
+- High Level Architecture
 - Software Principle
-- Project structure & application configuration
-- ERD Diagram
+- Project structure
 - How to run application
-- API Document
+- API Testing
 
 ## High Level Architecture
 
@@ -139,7 +138,7 @@ Every class should have a single responsibility, and that responsibility should 
   ![alt text](https://github.com/phongcui1510/smart_choice/blob/main/external-file/product-service-ping.PNG?raw=true)
   ![alt text](https://github.com/phongcui1510/smart_choice/blob/main/external-file/product-service-findbykeyword.PNG?raw=true)
 
-## API Document
+## API Testing
 - Searching product by name: (laptop, telephone, clothes) localhost:8080/products/api/findProductByKeyword?keyword={keyword}
   - example: curl --location --request GET 'localhost:8080/products/api/findProductByKeyword?keyword=laptop' \
 --header 'x-user: user001'
