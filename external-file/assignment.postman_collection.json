@@ -85,7 +85,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8080/products/findProductByKeyword?keyword=laptop",
+			"name": "localhost:8080/products/api/findProductByKeyword",
 			"request": {
 				"auth": {
 					"type": "oauth2",
@@ -165,6 +165,172 @@
 							"key": "keyword",
 							"value": "laptop"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/api/getProductDetailsById",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "XZfe1eznxMIskaMupa63PuKLjQ7VXK5Q3e3iOtev",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "0oaboywweOUSXhBUV5d6",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://dev-53338529.okta.com/oauth2/default/v1/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://dev-53338529.okta.com/oauth2/default/v1/authorize",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:8080/",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/api/getProductDetailsById?id=100",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"api",
+						"getProductDetailsById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/products/api/getProductDetailsById",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "XZfe1eznxMIskaMupa63PuKLjQ7VXK5Q3e3iOtev",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "0oaboywweOUSXhBUV5d6",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://dev-53338529.okta.com/oauth2/default/v1/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://dev-53338529.okta.com/oauth2/default/v1/authorize",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:8080/",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/audit/api/getCustomerActivities",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"audit",
+						"api",
+						"getCustomerActivities"
 					]
 				}
 			},

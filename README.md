@@ -113,10 +113,6 @@ Every class should have a single responsibility, and that responsibility should 
 | config-service    | 8888          |
 | rabbitmq          | 15672         |
 
-## ERD Diagram
-![alt text](https://github.com/tintin0122/smart_choice/blob/main/images/smart_choice_class.jpg?raw=true)
-
-*Note: For this assignment, I simplify the schema to one table(Product table) in product-service.
 
 ## How to run the application
 - Install [JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
@@ -136,20 +132,22 @@ Every class should have a single responsibility, and that responsibility should 
   - State: 123456
   - Or you can import /external-files/assignment.postman_collection.json
 
-- Run services: (note: make sure starting discovery-service at first)
+- Run services: (note: make sure starting discovery + config at first)
   - common: mvn clean install
-  - discovery-service, audit-service, gateway-service, config-service: mvn clean install && java -jar target/<service-name>-1.0.0.jar
-  - product-service, crawler-service: mvn clean install && java -jar configuration/target/configuration-1.0.0.jar
+  - discovery, audit, gateway, config: mvn clean install && java -jar target/<service-name>-1.0.0.jar
+  - product, crawler: mvn clean install && java -jar target/<service-name>-1.0.0.jar
 - Test services using postman:
   ![alt text](https://github.com/phongcui1510/smart_choice/blob/main/external-file/product-service-ping.PNG?raw=true)
   ![alt text](https://github.com/phongcui1510/smart_choice/blob/main/external-file/product-service-findbykeyword.PNG?raw=true)
 
 ## API Document
-- Searching product by name: (iphone, vinfast, shoe) http://localhost:8080/customers/{customer-id}/products/search?product-name={search-keyword}
-  - example: curl --location --request GET 'http://localhost:8080/customers/user001/products/search?product-name=iphone' \
+- Searching product by name: (laptop, telephone, clothes) localhost:8080/products/api/findProductByKeyword?keyword={keyword}
+  - example: curl --location --request GET 'localhost:8080/products/api/findProductByKeyword?keyword=laptop' \
 --header 'x-user: user001'
-- Go to product detail: http://localhost:8080/customers/{customer-id}/products/{product-id}
-  - example: curl --location --request GET 'http://localhost:8080/customers/user001/products/1202' \
+- Go to product detail: localhost:8080/products/api/getProductDetailsById?id={product-id}
+  - example: curl --location --request GET 'localhost:8080/products/api/getProductDetailsById?id=1' \
 --header 'x-user: user001' 
 - Get user activities:
   - curl --location --request GET 'http://localhost:8080/audit/customer-activity'
+
+Note: you can import postman collection and test by postman
