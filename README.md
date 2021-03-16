@@ -116,7 +116,6 @@ Every class should have a single responsibility, and that responsibility should 
 
 ## How to run the application
 - Install [JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
-- Install [Docker](https://www.docker.com/products/docker-desktop)
 - Install [Maven](https://maven.apache.org/download.cgi?Preferred=ftp://mirror.reverse.net/pub/apache/)
 - Clone the smart_choice repository
 - Get token:
